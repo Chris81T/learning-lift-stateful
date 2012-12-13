@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Home</title>
+</head>
+<body class="lift:content_id=main">
+<div id="main" class="lift:surround?with=default;at=content">
+    <section>
+        <header><h1>Learning lift...</h1></header>
+        <div class="panel">
+            <ul>
+                <li>using stateful snippet</li>
+                <li>render table, which can be manipulated</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section>
+        <h4>Create new article</h4>
+        <form>
+            <div class="lift:MyArticleStateful?form=post">
+                <label>Title:</label>
+                <input name="title" type="text" placeholder="Please enter a title"></input>
+                <label>Content:</label>
+                <textarea name="content" placeholder="Please enter a content"></textarea>
+
+                <!-- custom attribute -> small required for foundation -->
+                <span class="lift:Msg?id=both&errorClass=error alert label">error</span> 
+                <button class="button" type="submit">Save</button>
+            </div>
+        </form>
+    </section>    
+    
+    <section>
+        <h4>Existing articles</h4>        
+        <form>
+            <table class="twelve">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr class="lift:MyTableStateful">
+                        <td><input name="id" type="text" disabled="disabled"></input></td>
+                        <td><input name="title" type="text"></input></td>
+                        <td><input name="content" type="text"></input></td>
+                        <td>
+                            <ul class="button-group">
+                                <li><button class="button">edit</button></li>
+                                <li><button class="button">remove</button></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>                
+        </form>
+    </section>
+    
+</div>      
+</body>
+</html>
+
