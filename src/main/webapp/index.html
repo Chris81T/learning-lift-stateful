@@ -5,7 +5,7 @@
 <title>Home</title>
 </head>
 <body class="lift:content_id=main">
-<div id="main" class="lift:surround?with=default;at=content">
+<div id="main" data-lift="lift:surround?with=default;at=content">
     <section>
         <header><h1>Learning lift...</h1></header>
         <div class="panel">
@@ -19,15 +19,14 @@
     <section>
         <h4>Create new article</h4>
         <form>
-            <div class="lift:MyArticleStateful?form=post">
+            <div data-lift="lift:MyArticleStateful?form=post">
                 <label>Title:</label>
                 <input name="title" type="text" placeholder="Please enter a title"></input>
                 <label>Content:</label>
                 <textarea name="content" placeholder="Please enter a content"></textarea>
 
-                <!-- custom attribute -> small required for foundation -->
-                <span class="lift:Msg?id=both&errorClass=error alert label">error</span> 
-                <button class="button" type="submit">Save</button>
+				<button class="button" type="submit">Save</button>
+                <span class="lift:Msg?id=both&errorClass=error%20alert%20label">error</span>
             </div>
         </form>
     </section>    
@@ -45,7 +44,7 @@
                     </tr>
                 </thead> 
                 <tbody>
-                    <tr class="lift:MyTableStateful?form=post">
+                    <tr data-lift="lift:MyTableStateful?form=post">
                         <td><input name="id" type="text" disabled="disabled"></input></td>
                         <td><input name="title" type="text"></input></td>
                         <td><input name="content" type="text"></input></td>
